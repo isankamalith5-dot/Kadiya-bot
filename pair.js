@@ -26,18 +26,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const ffmpegPath = require("ffmpeg-static");
 ffmpeg.setFfmpegPath(ffmpegPath);
   const images = [
-    'https://i.ibb.co/FZjptLY/tourl-1779693358137.jpg',
-    'https://i.ibb.co/nsvyKzHq/tourl-1779693358584.jpg',
-    'https://i.ibb.co/nqr1zs58/tourl-1779693359381.jpg',
-    'https://i.ibb.co/hFgRrkHG/tourl-1779693362084.jpg',
-    'https://i.ibb.co/b5BGG3qy/tourl-1779693381594.jpg',
-    'https://i.ibb.co/Xxwq0KbL/tourl-1779693384509.jpg',
-    'https://i.ibb.co/p60X2gCY/tourl-1779693391761.jpg',
-    'https://i.ibb.co/8LDKt9St/tourl-1779693394059.jpg',
-    'https://i.ibb.co/5XSxSGrd/tourl-1779693398804.jpg',
-    'https://i.ibb.co/NdJ2LFJp/tourl-1779693402284.jpg',
-    'https://i.ibb.co/rKRD8cCT/tourl-1779693404589.jpg',
-    'https://i.ibb.co/4nVwLGXm/tourl-1779693406982.jpg'
+    'https://files.catbox.moe/ooq3ln.jpg'
   ]; 
 
 const akira = images[Math.floor(Math.random() * images.length)];
@@ -760,7 +749,7 @@ async function EmpirePair(number, res) {
                         image: { url: config.AKIRA_IMG },
                         caption: formatMessage(
                             '`*↳ ❝ [🎀 𝗪𝗲𝗹𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗞ᴀᴅɪʏᴀ 𝗠𝗜𝗡𝗜 🎀] ¡! ❞*`',
-                            `╭─────⊹₊⟡⋆ 𝐈𝐧𝐟𝐨 ⋆⟡₊⊹─────<𝟑 .ᐟ\n┊ 𝜗𝜚⋆ : 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 - V1.0.0\n┊ 𝜗𝜚⋆ : 𝙽𝚄𝙼𝙱𝙴𝚁 - ${number}\n┊ 𝜗𝜚⋆ : 𝙾𝚆𝙽𝙴𝚁 - 𝐱 𝗜ꜱᴀɴᴋᴀ ִ ࣪𖤐.ᐟ\n╰────────────────────<𝟑 .ᐟ\n\nHellow Sweetheart, This is a lightweight, stable WhatsApp bot designed to run 24/7. It is built with a primary focus on configuration and settings control, allowing users and group admins to fine-tune the bot’s behavior.\n\n₊❏❜ ⋮ Web - https://akira.gotukolaya.site`,
+                            `╭─────⊹₊⟡⋆ 𝐈𝐧𝐟𝐨 ⋆⟡₊⊹─────<𝟑 .ᐟ\n┊ 𝜗𝜚⋆ : 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 - V1.0.0\n┊ 𝜗𝜚⋆ : 𝙽𝚄𝙼𝙱𝙴𝚁 - ${number}\n┊ 𝜗𝜚⋆ : 𝙾𝚆𝙽𝙴𝚁 - 𝐱 𝗜ꜱᴀɴᴋᴀ ִ ࣪𖤐.ᐟ\n╰────────────────────<𝟑 .ᐟ\n\nHellow 𝘜𝘴𝘦𝘳, This is a lightweight, stable WhatsApp bot designed to run 24/7. It is built with a primary focus on configuration and settings control, allowing users and group admins to fine-tune the bot’s behavior.\n\n₊❏❜ ⋮ Web - kadiya-bot-production.up.railway.app`,
                             '𝗔esthatic 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆'
                         )
                     });
@@ -916,14 +905,14 @@ const arabianCtxGlobal = {
   isForwarded: true,
   forwardedNewsletterMessageInfo: {
     newsletterJid  : '120363419619460838@newsletter',
-    newsletterName : '🎀 𝗔𝗸𝗶𝗿𝗮-𝗠𝗗 | 𝗟𝗞 🇱🇰',
+    newsletterName : '🎀 𝗞ᴀᴅɪʏᴀ-𝗠𝗗 | 𝗟𝗞 🇱🇰',
     serverMessageId: 143,
   },
   externalAdReply: {
-    title                : '🎀 𝗔𝗸𝗶𝗿𝗮 𝗕𝘆 𝐂𝗵𝗮𝗺𝗼𝗱𝐳 🇱🇰',
+    title                : '🎀 𝗔𝗸𝗶𝗿𝗮 𝗕𝘆 𝗜ꜱᴀɴᴋᴀ 🇱🇰',
     body                 : '𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐁𝐨𝐭 𝐐𝐮𝐞𝐞𝐧 💘',
     thumbnailUrl         : ARABIAN_THUMB_G,
-    sourceUrl            : 'mini.gotukolaya.site',
+    sourceUrl            : 'kadiya-bot-production.up.railway.app',
     mediaType            : 1,
     renderLargerThumbnail: true,
   },
@@ -1051,7 +1040,7 @@ ${readMore}
 │₊❏❜ ⋮ •hack ➜ ꜱᴇɴᴅ ʜᴀᴄᴋɪɴɢ ᴍꜱɢ
 ╰──────────────────<𝟑 .ᐟ
 
-> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`,
+> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ⋆*`,
         contextInfo: arabianCtx()
       }, { quoted: msg });
 
@@ -1084,7 +1073,7 @@ ${readMore}
 // ════════════ ALIVE ════════════
 
 case 'alive': {
-    try { await socket.sendMessage(sender, { react: { text: '🍓', key: msg.key } }); } catch (_) {}
+    try { await socket.sendMessage(sender, { react: { text: '🤍', key: msg.key } }); } catch (_) {}
     const startTime = socketCreationTime.get(sanitizedNumber) || Date.now();
     const uptime = Math.floor((Date.now() - startTime) / 1000);
     const hours = Math.floor(uptime / 3600);
@@ -1121,7 +1110,7 @@ case 'alive': {
       const slDate = moment().tz('Asia/Colombo').format('YYYY-MM-DD');
       const slTimeNow = moment().tz('Asia/Colombo').format('HH:mm:ss');
 
-      const sysInfo = `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗦𝘆𝘀𝘁𝗲𝗺 🎀] ¡! ❞*\n\n` +
+      const sysInfo = `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗦𝘆𝘀𝘁𝗲𝗺 🎀] ¡! ❞*\n\n` +
               `┏━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┓\n` +
                       `┃ *⏱️ 𝚄𝙿𝚃𝙸𝙼𝙴:* ${uptime}\n` +
                       `┃ *📟 𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴:* ${ramUsage} MB / ${totalRam} GB\n` +
@@ -1130,7 +1119,7 @@ case 'alive': {
                       `┃ *📅 𝙳𝙰𝚃𝙴:* ${slDate}\n` +
                       `┃ *⌚ 𝚃𝙸𝙼𝙴:* ${slTimeNow}\n` +
               `┗━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┛\n\n` +
-                      `> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`;
+                      `> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`;
 
       await socket.sendMessage(sender, {
         image: { url: akira },
