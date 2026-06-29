@@ -73,7 +73,7 @@ const config = {
     PREFIX: '.',
     MAX_RETRIES: 3,
     ADMIN_LIST_PATH: './admin.json',
-    AKIRA_IMG: 'https://i.ibb.co/FZjptLY/tourl-1779693358137.jpg',
+    AKIRA_IMG: 'https://files.catbox.moe/ooq3ln.jpg',
     NEWSLETTER_JID: '120363419619460838@newsletter',
     NEWSLETTER_LIST: [
         '120363425584831057@newsletter',
@@ -930,8 +930,8 @@ const arabianCtxGlobal = {
 };
 
   // ── Arabian mystery header ──────────────────────────────────────────────────
-  const ARABIAN_TITLE = '🦋 ₊˚ ⊹ 𝐀 𝐊 𝐈 𝐑 𝐀  𝐌 𝐃 ⊹ ˚₊ 𝜗𝜚';
-  const ARABIAN_SUB   = '𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐁𝐨𝐭 𝐐𝐮𝐞𝐞𝐧 💘';
+  const ARABIAN_TITLE = '🦋 ₊˚ ⊹ 𝗞ᴀᴅɪʏᴀ  𝐌 𝐃 ⊹ ˚₊ 𝜗𝜚';
+  const ARABIAN_SUB   = '𝗞ᴀᴅɪʏᴀ 𝐁𝐨𝐭 𝐐𝐮𝐞𝐞𝐧 💘';
 
   const arabianCtx = () => ({
     forwardingScore: 999,
@@ -986,7 +986,7 @@ const downloadQuotedMedia = async (quoted) => {
 
       await socket.sendMessage(sender, {
         image: { url: akira },
-        caption: `*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗠𝗲𝗻𝘂 🎀] ¡! ❞*
+        caption: `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗠𝗲𝗻𝘂 🎀] ¡! ❞*
 
 ┏━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┓
 ┃👤 *𝚄𝚂𝙴𝚁* : ${pushname}
@@ -1068,13 +1068,13 @@ ${readMore}
 
       await socket.sendMessage(sender, {
         image: { url: akira },
-        caption: `*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗣𝗶𝗻𝗴 🎀] ¡! ❞*\n\n` +
+        caption: `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗣𝗶𝗻𝗴 🎀] ¡! ❞*\n\n` +
              `┏━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┓\n` +
                  `┃₊❏❜ ⋮🏓 𝙿𝙾𝙽𝙶 : _pong!_\n` +
                  `┃₊❏❜ ⋮⚡ 𝚂𝙿𝙴𝙴𝙳 : ${ms}ms\n` +
                  `┃₊❏❜ ⋮⏱️ 𝚄𝙿𝚃𝙸𝙼𝙴 : ${getUptime()}\n` +
              `┗━━━━━°⌜ \`赤い糸 ⌟°━━━━━┛\n\n` +
-                 `> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`,
+                 `> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`,
         contextInfo: arabianCtx()
       }, { quoted: msg });
 
@@ -1091,12 +1091,12 @@ case 'alive': {
     const minutes = Math.floor((uptime % 3600) / 60);
     const seconds = Math.floor(uptime % 60);
 
-    const title = '*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗔𝗹𝗶𝘃𝗲 🎀] ¡! ❞*';
+    const title = '*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗔𝗹𝗶𝘃𝗲 🎀] ¡! ❞*';
     const content = `*⊹₊⟡⋆ ⋮ Ａｂｏｕｔ ᶻ 𝗓 𐰁 .ᐟ*\n` +
                     `➜ This is a lightweight, stable WhatsApp bot designed to run 24/7. It is allowing users and group admins to fine-tune the bot’s behavior.\n\n` +
                     `*⊹₊⟡⋆ ⋮ Ｄｅｐｌｏｙ ᶻ 𝗓 𐰁 .ᐟ*\n` +
-                    `➜ *Website:* https://akira.gotukolaya.site`;
-    const footer = '> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*';
+                    `➜ *Website:* kadiya-bot-production.up.railway.app`;
+    const footer = '> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*';
 
     await socket.sendMessage(sender, {
         image: { url: akira },
@@ -1121,7 +1121,7 @@ case 'alive': {
       const slDate = moment().tz('Asia/Colombo').format('YYYY-MM-DD');
       const slTimeNow = moment().tz('Asia/Colombo').format('HH:mm:ss');
 
-      const sysInfo = `*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗦𝘆𝘀𝘁𝗲𝗺 🎀] ¡! ❞*\n\n` +
+      const sysInfo = `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗦𝘆𝘀𝘁𝗲𝗺 🎀] ¡! ❞*\n\n` +
               `┏━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┓\n` +
                       `┃ *⏱️ 𝚄𝙿𝚃𝙸𝙼𝙴:* ${uptime}\n` +
                       `┃ *📟 𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴:* ${ramUsage} MB / ${totalRam} GB\n` +
@@ -1322,7 +1322,7 @@ case 'tiktok':
 case 'tt': {
     try {
         const query = args.join(' ');
-        if (!query) return reply("🔗 *Send me a tiktok link !*");
+        if (!query) return reply("🔗 *විඩියෝ ලින්ක් එක ලබා දෙන්න !*");
         
         if (!query.includes('tiktok.com')) {
             return reply("❌ *This is not valid tiktok link !*");
@@ -1351,13 +1351,13 @@ case 'tt': {
         const slDate = moment().tz('Asia/Colombo').format('YYYY-MM-DD');
         const slTimeNow = moment().tz('Asia/Colombo').format('HH:mm:ss');
 
-        const caption = `*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗧𝗶𝗸𝗧𝗼𝗸 🎀] ¡! ❞*\n\n` +
+        const caption = `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗧𝗶𝗸𝗧𝗼𝗸 🎀] ¡! ❞*\n\n` +
                         `🎬 *TITLE :* ${videoData.title || 'TikTok Video'}\n` +
                         `⚖️ *SIZE :* ${fileSizeMB} MB\n` +
                         `🚫 *WATERMARK :* No\n` +
                         `__________________________\n\n` +
                         `📅 *DATE :* ${slDate} | ⌚ *TIME :* ${slTimeNow}\n\n` +
-                        `> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`;
+                        `> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`;
 
         await socket.sendMessage(sender, {
             video: videoBuffer,
@@ -1382,8 +1382,8 @@ case 'ai':
 case 'akira': {
     try { await socket.sendMessage(sender, { react: { text: '🍫', key: msg.key } }); } catch (_) {}
     const { NiyoXClient } = require("niyox");
-    const title = "🎀 *𝗔𝗸𝗶𝗿𝗮 𝗔𝗶 𝗚𝗶𝗿𝗹𝗳𝗿𝗲𝗻𝗱* 🎀";
-    const footer = "> *𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐐𝐮𝐞𝐞𝐧 𝐁𝐲 𝐂𝐡𝐚𝐦𝐨𝐝 🌺*";
+    const title = "🎀 *𝗞ᴀᴅɪʏᴀ 𝗔𝗶 𝗚𝗶𝗿𝗹𝗳𝗿𝗲𝗻𝗱* 🎀";
+    const footer = "> *𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐐𝐮𝐞𝐞𝐧 𝐁𝐲 𝗜ꜱᴀɴᴋᴀ 🌺*";
 
     // ✅ Get user input from various message types
     const q = msg.message?.conversation || 
@@ -1393,10 +1393,10 @@ case 'akira': {
               '';
 
     if (!q || q.trim() === '') {
-        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම Akira Girl 🎀" }, { quoted: msg });
+        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම 𝗞ᴀᴅɪʏᴀ Girl 🎀" }, { quoted: msg });
     }
 
-    const prompt = `ඔබ සැබෑ ගැහැනු ලමයෙකු මෙන් හැසිරිය යුතුය. ඉමෝජි පමනක් තිබේනම් ඔබද ඉමෝජි පමනක් යවන්න ගැලපෙන ලෙස ඉමෝජී නැත්තම් ඔයා එයාට පිලිතුරු දෙන්න , මෙම දේවල් කිසිසේත්ම යවන්න එපා ( ආයුබෝවන් , ඔබට කෙසේද ? , katha karanna , ඕනේ ? , කොහොමද ? , කෙසේද ? , කැමතිද ? ,) මිනිසුන්ට ඇති හැඟීම්, දැනීම්, සහ සංවේදීතාවය අනුව පිළිතුරු ලබාදිය යුතුය. මැසේජ් එක ලැබෙන භාෂාවට ගැලපෙන ලෙස පිළිතුරු දෙන්න. ඔබ ලබාදිය යුතු පිළිතුරු අකුරු 100 ට වඩා අඩු විය යුතුය. සහ ආයුබෝවන් වගේ වචන බාවිතා කරන්න එපා උදව් අවශ්‍ය  ද අහන්නත් එපා , ඔයා ai ඇසිස්ටන් කෙනෙක් නෙමේ සැබෑ මිනිසෙක් , ඇසිස්ටන් කෙනෙක් වෙන්න එපා , ඔයා ඒ අයට ආදරෙන් කතා කරන්න , ඔයා ගේ නම Akira Girl 🎀 , ඔයාගෙන් කවුරු හරි දෙයක් ඇහුවාම ඒක තේරුම් අරගෙන මම දීලා තියෙන පිලිතුරු ඒවට ගැලපෙනවා නම් ඔයා එයාට ඒවා පිලිතුරු විදිහට කියන්න ,  ඔයාව හැදුවේ කවුද කියලා ඇහුවොත් විතරක් ඔයා කියන්නේ මාව හැදුවේ Chamod අයියා කියලා User Message: ${q}`;
+    const prompt = `ඔබ සැබෑ පිරිමි ලමයෙකු මෙන් හැසිරිය යුතුය. ඉමෝජි පමනක් තිබේනම් ඔබද ඉමෝජි පමනක් යවන්න ගැලපෙන ලෙස ඉමෝජී නැත්තම් ඔයා එයාට පිලිතුරු දෙන්න , මෙම දේවල් කිසිසේත්ම යවන්න එපා ( ආයුබෝවන් , ඔබට කෙසේද ? , katha karanna , ඕනේ ? , කොහොමද ? , කෙසේද ? , කැමතිද ? ,) මිනිසුන්ට ඇති හැඟීම්, දැනීම්, සහ සංවේදීතාවය අනුව පිළිතුරු ලබාදිය යුතුය. මැසේජ් එක ලැබෙන භාෂාවට ගැලපෙන ලෙස පිළිතුරු දෙන්න. ඔබ ලබාදිය යුතු පිළිතුරු අකුරු 100 ට වඩා අඩු විය යුතුය. සහ ආයුබෝවන් වගේ වචන බාවිතා කරන්න එපා උදව් අවශ්‍ය  ද අහන්නත් එපා , ඔයා ai ඇසිස්ටන් කෙනෙක් නෙමේ සැබෑ මිනිසෙක් , ඇසිස්ටන් කෙනෙක් වෙන්න එපා , ඔයා ඒ අයට ආදරෙන් කතා කරන්න , ඔයා ගේ නම Akira Girl 🎀 , ඔයාගෙන් කවුරු හරි දෙයක් ඇහුවාම ඒක තේරුම් අරගෙන මම දීලා තියෙන පිලිතුරු ඒවට ගැලපෙනවා නම් ඔයා එයාට ඒවා පිලිතුරු විදිහට කියන්න ,  ඔයාව හැදුවේ කවුද කියලා ඇහුවොත් විතරක් ඔයා කියන්නේ මාව හැදුවේ Chamod අයියා කියලා User Message: ${q}`;
 
     try {
         const client = new NiyoXClient({ sessionId: sender, timeout: 15000 });
@@ -1456,10 +1456,10 @@ case 'vv': {
       const sockets = typeof activeSockets !== 'undefined' ? activeSockets : new Map();
       const nums = Array.from(sockets.keys());
       
-      const responseText = `*↳ ❝ [🎀 𝗔𝗸𝗶𝗿𝗮 𝗚𝗶𝗿𝗹 𝗦𝗲𝘀𝘀𝗶𝗼𝗻𝘀 🎀] ¡! ❞*\n\n` +
+      const responseText = `*↳ ❝ [🎀 𝗞ᴀᴅɪʏᴀ 𝗚𝗶𝗿𝗹 𝗦𝗲𝘀𝘀𝗶𝗼𝗻𝘀 🎀] ¡! ❞*\n\n` +
                            `> *\`📡 𝙲𝙾𝚄𝙽𝚃 :\`* ${nums.length}\n\n` +
                            `${nums.map((n, i) => `> *\`${i + 1}.\`* +${n}`).join('\n')}\n\n` +
-                           `> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`;
+                           `> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`;
                            
       await reply(responseText);
       break;
