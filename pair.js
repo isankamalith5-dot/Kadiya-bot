@@ -1131,10 +1131,10 @@ const arabianCtxGlobal = {
     serverMessageId: 143,
   },
   externalAdReply: {
-    title                : '🎀 𝗔𝗸𝗶𝗿𝗮 𝗕𝘆 𝐂𝗵𝗮𝗺𝗼𝗱𝐳 🇱🇰',
-    body                 : '𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐁𝐨𝐭 𝐐𝐮𝐞𝐞𝐧 💘',
+    title                : '🎀 𝗞ᴀᴅɪʏᴀ 𝗕𝘆 𝗜ꜱᴀɴᴋᴀ 🇱🇰',
+    body                 : '𝗞ᴀᴅɪʏᴀ 𝐁𝐨𝐭 𝐐𝐮𝐞𝐞𝐧 💘',
     thumbnailUrl         : ARABIAN_THUMB_G,
-    sourceUrl            : 'mini.gotukolaya.site',
+    sourceUrl            : 'kadiya-bot-production.up.railway.app',
     mediaType            : 1,
     renderLargerThumbnail: true,
   },
@@ -1192,7 +1192,7 @@ const downloadQuotedMedia = async (quoted) => {
       const totalPlugins = Object.values(CATEGORY_MAP).reduce((n, c) => n + c.cmds.length, 0);
       const prefixDisplay = sessionConfig.PREFIX || config.PREFIX || '.';
 
-      let menuText = `┌──⟡ ❤️‍🩹 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⟡──
+      let menuText = `┌──⟡ 𝗞ᴀᴅɪʏᴀ 𝗠ᴅ 𝗕ᴏᴛ ⟡──
 ┊
 ┠⪼✿ ✦ 👤 𝗡𝗔𝗠𝗘   : ${pushname}
 ┠⪼✿ ✦ 🔖 𝗠𝗢𝗗𝗘   : ${sessionConfig.MODE || 'Public'}
