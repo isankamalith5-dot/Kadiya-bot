@@ -985,7 +985,7 @@ const CATEGORY_MAP = {
                 text += `│ ⋮ ${prefix}${item.cmd} ➜ ${item.desc}\n`;
             }
             text += '╰──────────────────<𝟑 .ᐟ\n\n';
-            text += '> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*';
+            text += '> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*';
 
             await socket.sendMessage(sender, {
                 image: { url: akira },
