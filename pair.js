@@ -953,6 +953,13 @@ const CATEGORY_MAP = {
         ]
     },
     7: {
+        emoji: '🎵',
+        title: 'Song & Music',
+        cmds: [
+            { cmd: 'song', desc: 'ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴏɴɢ' },
+        ]
+    },
+    8: {
         emoji: '📁',
         title: 'Other Cmds',
         cmds: [
@@ -963,13 +970,6 @@ const CATEGORY_MAP = {
             { cmd: 'lvcal', desc: 'ʟᴏᴠᴇ ᴄᴀʟᴄᴜʟᴀᴛᴏʀ' },
             { cmd: 'hentai', desc: 'ɢᴇᴛ ʜᴇɴᴛᴀɪ ᴠɪᴅᴇᴏ (18+)' },
             { cmd: 'channel', desc: 'ᴠɪᴇᴡ ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ' },
-        ]
-    },
-    8: {
-        emoji: '🎵',
-        title: 'Song & Music',
-        cmds: [
-            { cmd: 'song', desc: 'ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴏɴɢ' },
         ]
     },
 };
