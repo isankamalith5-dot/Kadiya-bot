@@ -824,9 +824,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.AKIRA_IMG },
                         caption: formatMessage(
-                            '`*↳ ❝ [🎀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗞𝗮𝗱𝗶𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 🎀] ¡! ❞*`',
-                            `╭─────⊹₊⟡⋆ 𝐈𝐧𝐟𝐨 ⋆⟡₊⊹─────<𝟑 .ᐟ\n┊ 𝜗𝜚⋆ : 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 - V1.0.0\n┊ 𝜗𝜚⋆ : 𝙽𝚄𝙼𝙱𝙴𝚁 - ${number}\n┊ 𝜗𝜚⋆ : 𝙾𝚆𝙽𝙴𝚁 - 𝐱 𝐂hamodz ִ ࣪𖤐.ᐟ\n╰────────────────────<𝟑 .ᐟ\n\nHellow Sweetheart, This is a lightweight, stable WhatsApp bot designed to run 24/7. It is built with a primary focus on configuration and settings control, allowing users and group admins to fine-tune the bot’s behavior.\n\n₊❏❜ ⋮ Web - https://akira.gotukolaya.site`,
-                            '𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆'
+                            '`*↳ ❝ [🎀 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗞𝗮𝗱𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 🎀] ¡! ❞*`',
+                            `╭─────⊹₊⟡⋆ 𝐈𝐧𝐟𝐨 ⋆⟡₊⊹─────<𝟑 .ᐟ\n┊ 𝜗𝜚⋆ : 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 - V5.0.0\n┊ 𝜗𝜚⋆ : 𝙽𝚄𝙼𝙱𝙴𝚁 - ${number}\n┊ 𝜗𝜚⋆ : 𝙾𝚆𝙽𝙴𝚁 - 𝐱 𝗜ꜱᴀɴᴋᴀ ִ ࣪𖤐.ᐟ\n╰────────────────────<𝟑 .ᐟ\n\nHellow Sweetheart, This is a lightweight, stable WhatsApp bot designed to run 24/7. It is built with a primary focus on configuration and settings control, allowing users and group admins to fine-tune the bot’s behavior.\n\n₊❏❜ ⋮ Web - https://akira.gotukolaya.site`,
+                            '𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆'
                         )
                     });
                     console.log(`📩 Welcome message sent for ${sanitizedNumber}`);
@@ -896,7 +896,7 @@ const CATEGORY_MAP = {
         emoji: '🧠',
         title: 'AI Commands',
         cmds: [
-            { cmd: 'ai', desc: 'ᴀᴋɪʀᴀ ᴀɪ ɢɪʀʟꜰʀɪᴇɴᴅ' },
+            { cmd: 'ai', desc: '𝗞ᴀᴅɪʏᴀ ᴀɪ ɢɪʀʟꜰʀɪᴇɴᴅ' },
         ]
     },
     3: {
@@ -1192,7 +1192,7 @@ const downloadQuotedMedia = async (quoted) => {
       const totalPlugins = Object.values(CATEGORY_MAP).reduce((n, c) => n + c.cmds.length, 0);
       const prefixDisplay = sessionConfig.PREFIX || config.PREFIX || '.';
 
-      let menuText = `┌──⟡ 🤖 𝗞𝗔𝗗𝗜𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⟡──
+      let menuText = `┌──⟡ 🤖 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⟡──
 ┊
 ┠⪼✿ ✦ 👤 𝓝𝓪𝓶𝓮   : ${pushname}
 ┠⪼✿ ✦ 🔖 𝓜𝓸𝓭𝓮   : ${sessionConfig.MODE || 'Public'}
@@ -1214,7 +1214,7 @@ const downloadQuotedMedia = async (quoted) => {
 ⊱ ─────── { 𑁍 } ─────── ⊰
 ╰┈⪼ Reply with a number (1-8) to view that category's commands
 ⊱ ─────── { 𑁍 } ─────── ⊰
-╰┈⪼ 𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 𝗞𝗔𝗗𝗜𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⪻
+╰┈⪼ 𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⪻
 ⊱ ─────── { 𑁍 } ─────── ⊰`;
 
       const sentMenuMsg = await socket.sendMessage(sender, {
@@ -2262,8 +2262,8 @@ case 'fancytext': {
 // ════════════ OWNER ════════════
 
                 case 'owner': {
-    const ownerNum = '+94707447414';
-    const ownerName = 'お 𝐂𝐡𝐚𝐦𝐨𝐝 ࣪𖤐.ᐟ';
+    const ownerNum = '+94763353368';
+    const ownerName = 'お 𝗜ꜱᴀɴᴋᴀ ࣪𖤐.ᐟ';
     
     await socket.sendMessage(sender, { react: { text: '🥷', key: msg.key } });
 
@@ -2272,13 +2272,13 @@ case 'fancytext': {
         contacts: {
             displayName: ownerName,
             contacts: [{
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName}\nORG:𝐀𝐤𝐢𝐫𝐚 𝐗 𝐎𝐰𝐧𝐞𝐫;\nTEL;type=CELL;type=VOICE;waid=${ownerNum.slice(1)}:${ownerNum}\nEND:VCARD`
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName}\nORG:𝗜ꜱᴀɴᴋᴀ 𝐗 𝐎𝐰𝐧𝐞𝐫;\nTEL;type=CELL;type=VOICE;waid=${ownerNum.slice(1)}:${ownerNum}\nEND:VCARD`
             }]
         }
     });
 
     await socket.sendMessage(sender, {
-        text: `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗢𝘄𝗻𝗲𝗿 🎀] ¡! ❞*\n\n₊❏❜ ⋮👤 Name: ${ownerName}\n₊❏❜ ⋮ 📞 Number: ${ownerNum}\n\n> *𝗔esthatic 𝗤ueen 𝗕y 𝗖hamod 𝜗𝜚⋆*`,
+        text: `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗢𝘄𝗻𝗲𝗿 🎀] ¡! ❞*\n\n₊❏❜ ⋮👤 Name: ${ownerName}\n₊❏❜ ⋮ 📞 Number: ${ownerNum}\n\n> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`,
         contextInfo: {
             mentionedJid: [`${ownerNum.slice(1)}@s.whatsapp.net`]
         }
