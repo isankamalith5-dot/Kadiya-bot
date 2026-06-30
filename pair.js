@@ -1192,15 +1192,15 @@ const downloadQuotedMedia = async (quoted) => {
       const totalPlugins = Object.values(CATEGORY_MAP).reduce((n, c) => n + c.cmds.length, 0);
       const prefixDisplay = sessionConfig.PREFIX || config.PREFIX || '.';
 
-      let menuText = `┌──⟡ 🤖 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⟡──
+      let menuText = `┌──⟡ ❤️‍🩹 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⟡──
 ┊
-┠⪼✿ ✦ 👤 𝓝𝓪𝓶𝓮   : ${pushname}
-┠⪼✿ ✦ 🔖 𝓜𝓸𝓭𝓮   : ${sessionConfig.MODE || 'Public'}
-┠⪼✿ ✦ 📅 𝓓𝓪𝓽𝓮   : ${slDate}
-┠⪼✿ ✦ ⏰ 𝓣𝓲𝓶𝓮   : ${slTimeNow}
-┠⪼✿ ✦ ⚡ 𝓤𝓹𝓽𝓲𝓶𝓮 : ${getUptime()}
-┠⪼✿ ✦ 📦 𝓟𝓵𝓾𝓰𝓲𝓷𝓼: ${totalPlugins}
-┠⪼✿ ✦ 🔰 𝓟𝓻𝓮𝓯𝓲𝔁 : ${prefixDisplay}
+┠⪼✿ ✦ 👤 𝗡𝗔𝗠𝗘   : ${pushname}
+┠⪼✿ ✦ 🔖 𝗠𝗢𝗗𝗘   : ${sessionConfig.MODE || 'Public'}
+┠⪼✿ ✦ 📅 𝗗𝗔𝗧𝗘   : ${slDate}
+┠⪼✿ ✦ ⏰ 𝗧𝗜𝗠𝗘   : ${slTimeNow}
+┠⪼✿ ✦ ⚡ 𝗨𝗣𝗧𝗜𝗠𝗘 : ${getUptime()}
+┠⪼✿ ✦ 📦 𝗣𝗟𝗨𝗚𝗜𝗡𝗦: ${totalPlugins}
+┠⪼✿ ✦ 🔰 𝗣𝗥𝗘𝗙𝗜𝗫 : ${prefixDisplay}
 ┊
 └──⟡ ━━━━━━━━━━━━━━━━ ⟡
 ┏━━━━『 𝐂𝐀𝐓𝐄𝐆𝐎𝐑𝐈𝐄𝐒 』━━━━━`;
@@ -1211,16 +1211,14 @@ const downloadQuotedMedia = async (quoted) => {
       }
 
       menuText += `\n┗━━━━━━━━━━━━━━━━━━━━━━━━━
-⊱ ─────── { 𑁍 } ─────── ⊰
-╰┈⪼ Reply with a number (1-8) to view that category's commands
-⊱ ─────── { 𑁍 } ─────── ⊰
-╰┈⪼ 𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ⪻
+	  
+╰┈⪼ ◀ 𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ▶ ⪻
 ⊱ ─────── { 𑁍 } ─────── ⊰`;
 
       const sentMenuMsg = await socket.sendMessage(sender, {
         image: { url: akira },
         caption: menuText,
-        footer: '𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘉𝘺 𝗞𝗔𝗗𝗜𝗜𝗬𝗔 𝗠𝗜𝗡𝗜',
+        footer: '◀ 𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗞𝗔𝗗𝗜𝗬𝗔 𝗠𝗜𝗡𝗜 ▶',
         buttons: Object.keys(CATEGORY_MAP).map(num => ({
             buttonId: `cat_${num}`,
             buttonText: { displayText: `${num}. ${CATEGORY_MAP[num].emoji} ${CATEGORY_MAP[num].title}` },
@@ -1246,13 +1244,13 @@ const downloadQuotedMedia = async (quoted) => {
 
       await socket.sendMessage(sender, {
         image: { url: akira },
-        caption: `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗣𝗶𝗻𝗴 🎀] ¡! ❞*\n\n` +
+        caption: `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗣𝗶𝗻𝗴 🎀] ¡! ❞*\n\n` +
              `┏━━━━━°⌜ \`赤い糸\` ⌟°━━━━━┓\n` +
                  `┃₊❏❜ ⋮🏓 𝙿𝙾𝙽𝙶 : _pong!_\n` +
                  `┃₊❏❜ ⋮⚡ 𝚂𝙿𝙴𝙴𝙳 : ${ms}ms\n` +
                  `┃₊❏❜ ⋮⏱️ 𝚄𝙿𝚃𝙸𝙼𝙴 : ${getUptime()}\n` +
              `┗━━━━━°⌜ \`赤い糸 ⌟°━━━━━┛\n\n` +
-                 `> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`,
+                 `> *𝗞ᴀᴅɪʏᴀ 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*`,
         contextInfo: arabianCtx()
       }, { quoted: msg });
 
@@ -1269,12 +1267,12 @@ case 'alive': {
     const minutes = Math.floor((uptime % 3600) / 60);
     const seconds = Math.floor(uptime % 60);
 
-    const title = '*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗔𝗹𝗶𝘃𝗲 🎀] ¡! ❞*';
+    const title = '*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗔𝗹𝗶𝘃𝗲 🎀] ¡! ❞*';
     const content = `*⊹₊⟡⋆ ⋮ Ａｂｏｕｔ ᶻ 𝗓 𐰁 .ᐟ*\n` +
                     `➜ This is a lightweight, stable WhatsApp bot designed to run 24/7. It is allowing users and group admins to fine-tune the bot’s behavior.\n\n` +
                     `*⊹₊⟡⋆ ⋮ Ｄｅｐｌｏｙ ᶻ 𝗓 𐰁 .ᐟ*\n` +
-                    `➜ *Website:* https://akira.gotukolaya.site`;
-    const footer = '> *𝗔esthatic 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*';
+                    `➜ *Website:* kadiya-bot-production.up.railway.app`;
+    const footer = '> *𝗞ᴀᴅɪʏᴀ 𝗤ueen 𝗕y 𝗜ꜱᴀɴᴋᴀ 𝜗𝜚⋆*';
 
     await socket.sendMessage(sender, {
         image: { url: akira },
@@ -1560,8 +1558,8 @@ case 'ai':
 case 'akira': {
     try { await socket.sendMessage(sender, { react: { text: '🍫', key: msg.key } }); } catch (_) {}
     const { NiyoXClient } = require("niyox");
-    const title = "🎀 *𝗔𝗸𝗶𝗿𝗮 𝗔𝗶 𝗚𝗶𝗿𝗹𝗳𝗿𝗲𝗻𝗱* 🎀";
-    const footer = "> *𝐀𝐞𝐬𝐭𝐡𝐚𝐭𝐢𝐜 𝐐𝐮𝐞𝐞𝐧 𝐁𝐲 𝐂𝐡𝐚𝐦𝐨𝐝 🌺*";
+    const title = "🎀 *𝗞ᴀᴅɪʏᴀ 𝗔𝗶 𝗚𝗶𝗿𝗹𝗳𝗿𝗲𝗻𝗱* 🎀";
+    const footer = "> *𝗞ᴀᴅɪʏᴀ 𝐐𝐮𝐞𝐞𝐧 𝐁𝐲 𝗜ꜱᴀɴᴋᴀ 🌺*";
 
     // ✅ Get user input from various message types
     const q = msg.message?.conversation || 
@@ -1571,10 +1569,10 @@ case 'akira': {
               '';
 
     if (!q || q.trim() === '') {
-        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම Kadiiya Mini 🎀" }, { quoted: msg });
+        return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම Kadiya Mini 🎀" }, { quoted: msg });
     }
 
-    const prompt = `ඔබ සැබෑ ගැහැනු ලමයෙකු මෙන් හැසිරිය යුතුය. ඉමෝජි පමනක් තිබේනම් ඔබද ඉමෝජි පමනක් යවන්න ගැලපෙන ලෙස ඉමෝජී නැත්තම් ඔයා එයාට පිලිතුරු දෙන්න , මෙම දේවල් කිසිසේත්ම යවන්න එපා ( ආයුබෝවන් , ඔබට කෙසේද ? , katha karanna , ඕනේ ? , කොහොමද ? , කෙසේද ? , කැමතිද ? ,) මිනිසුන්ට ඇති හැඟීම්, දැනීම්, සහ සංවේදීතාවය අනුව පිළිතුරු ලබාදිය යුතුය. මැසේජ් එක ලැබෙන භාෂාවට ගැලපෙන ලෙස පිළිතුරු දෙන්න. ඔබ ලබාදිය යුතු පිළිතුරු අකුරු 100 ට වඩා අඩු විය යුතුය. සහ ආයුබෝවන් වගේ වචන බාවිතා කරන්න එපා උදව් අවශ්‍ය  ද අහන්නත් එපා , ඔයා ai ඇසිස්ටන් කෙනෙක් නෙමේ සැබෑ මිනිසෙක් , ඇසිස්ටන් කෙනෙක් වෙන්න එපා , ඔයා ඒ අයට ආදරෙන් කතා කරන්න , ඔයා ගේ නම Kadiiya Mini 🎀 , ඔයාගෙන් කවුරු හරි දෙයක් ඇහුවාම ඒක තේරුම් අරගෙන මම දීලා තියෙන පිලිතුරු ඒවට ගැලපෙනවා නම් ඔයා එයාට ඒවා පිලිතුරු විදිහට කියන්න ,  ඔයාව හැදුවේ කවුද කියලා ඇහුවොත් විතරක් ඔයා කියන්නේ මාව හැදුවේ Chamod අයියා කියලා User Message: ${q}`;
+    const prompt = `ඔබ සැබෑ පිරිමි ලමයෙකු මෙන් හැසිරිය යුතුය. ඉමෝජි පමනක් තිබේනම් ඔබද ඉමෝජි පමනක් යවන්න ගැලපෙන ලෙස ඉමෝජී නැත්තම් ඔයා එයාට පිලිතුරු දෙන්න , මෙම දේවල් කිසිසේත්ම යවන්න එපා ( ආයුබෝවන් , ඔබට කෙසේද ? , katha karanna , ඕනේ ? , කොහොමද ? , කෙසේද ? , කැමතිද ? ,) මිනිසුන්ට ඇති හැඟීම්, දැනීම්, සහ සංවේදීතාවය අනුව පිළිතුරු ලබාදිය යුතුය. මැසේජ් එක ලැබෙන භාෂාවට ගැලපෙන ලෙස පිළිතුරු දෙන්න. ඔබ ලබාදිය යුතු පිළිතුරු අකුරු 100 ට වඩා අඩු විය යුතුය. සහ ආයුබෝවන් වගේ වචන බාවිතා කරන්න එපා උදව් අවශ්‍ය  ද අහන්නත් එපා , ඔයා ai ඇසිස්ටන් කෙනෙක් නෙමේ සැබෑ මිනිසෙක් , ඇසිස්ටන් කෙනෙක් වෙන්න එපා , ඔයා ඒ අයට ආදරෙන් කතා කරන්න , ඔයා ගේ නම Kadiiya Mini 🎀 , ඔයාගෙන් කවුරු හරි දෙයක් ඇහුවාම ඒක තේරුම් අරගෙන මම දීලා තියෙන පිලිතුරු ඒවට ගැලපෙනවා නම් ඔයා එයාට ඒවා පිලිතුරු විදිහට කියන්න ,  ඔයාව හැදුවේ කවුද කියලා ඇහුවොත් විතරක් ඔයා කියන්නේ මාව හැදුවේ Chamod අයියා කියලා User Message: ${q}`;
 
     try {
         const client = new NiyoXClient({ sessionId: sender, timeout: 15000 });
@@ -1634,10 +1632,10 @@ case 'vv': {
       const sockets = typeof activeSockets !== 'undefined' ? activeSockets : new Map();
       const nums = Array.from(sockets.keys());
       
-      const responseText = `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗦𝗲𝘀𝘀𝗶𝗼𝗻𝘀 🎀] ¡! ❞*\n\n` +
+      const responseText = `*↳ ❝ [🎀 𝗞𝗮𝗱𝗶𝘆𝗮 𝗠𝗶𝗻𝗶 𝗦𝗲𝘀𝘀𝗶𝗼𝗻𝘀 🎀] ¡! ❞*\n\n` +
                            `> *\`📡 𝙲𝙾𝚄𝙽𝚃 :\`* ${nums.length}\n\n` +
                            `${nums.map((n, i) => `> *\`${i + 1}.\`* +${n}`).join('\n')}\n\n` +
-                           `> *𝗔esthatic 𝗤ueen 𝗕y Isanka 𝜗𝜚⋆*`;
+                           `> *𝗞ᴀᴅɪʏᴀ 𝗤ueen 𝗕y Isanka 𝜗𝜚⋆*`;
                            
       await reply(responseText);
       break;
