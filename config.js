@@ -1,4 +1,4 @@
-const BOT_NAME_FANCY = '✦ 𝐀𝐍𝐔 𝐌𝐃 ✦';
+const BOT_NAME_FANCY = '✦ 𝐊𝐀𝐃𝐈𝐘𝐀 𝐌𝐃 ✦';
 
 const config = {
   AUTO_VIEW_STATUS: 'false',
@@ -19,27 +19,25 @@ const config = {
   PREFIX: '.',
   MAX_RETRIES: 3,
 
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/KBy93MkplPmGLwbPU3GSnd',
-  CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6UR8S8fewn0otjcc0g',
-  NEWSLETTER_JID: '120363409995383814@newsletter',
+  GROUP_INVITE_LINK: '',
+  CHANNEL_LINK: '',
+  NEWSLETTER_JID: '120363399723529947@newsletter',
 
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '94764014979',
-  OWNER_NAME: 'Thihina Anuhas',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '94763353368',
+  OWNER_NAME: 'Isanka',
 
   OWNER_CONTACTS: [
-    { name: 'Thihina Anuhas🖤 Owner', number: '94764014979' },
-    { name: 'Nimeshka Mihiran 👑 No.2', number: '94721584279' },
-    { name: 'Nimeshka Mihiran 🌍 No.3', number: '94728304801' },
+    { name: 'Isanka 🖤 Owner', number: '94763353368' }
   ],
 
-  BOT_NAME: 'ANU MD',
+  BOT_NAME: 'KADIYA MD',
   BOT_VERSION: 'V1',
-  BOT_FOOTER: 'ᴘᴏᴡᴇʀᴅ ʙʏ ᴀɴᴜ ᴍᴅ',
+  BOT_FOOTER: 'ᴘᴏᴡᴇʀᴅ ʙʏ ᴋᴀᴅɪʏᴀ ᴍᴅ',
 
-  RCD_IMAGE_PATH: 'https://raw.githubusercontent.com/NimeshMihiranga-Neno/Mezuka-help/main/IMG-20260704-WA0001.jpg',
-  IMAGE_PATH: 'https://raw.githubusercontent.com/NimeshMihiranga-Neno/Mezuka-help/main/IMG-20260704-WA0001.jpg',
+  RCD_IMAGE_PATH: 'https://files.catbox.moe/k8zvw2.jpg',
+  IMAGE_PATH: 'https://files.catbox.moe/k8zvw2.jpg',
   BUTTON_IMAGES: {
-    ALIVE: 'https://raw.githubusercontent.com/NimeshMihiranga-Neno/Mezuka-help/main/IMG-20260704-WA0001.jpg'
+    ALIVE: 'https://files.catbox.moe/k8zvw2.jpg'
   },
 
   OTP_EXPIRY: 300000,
@@ -51,8 +49,8 @@ const NEWSLETTER_CONTEXT = {
   forwardingScore: 1,
   isForwarded: true,
   forwardedNewsletterMessageInfo: {
-    newsletterJid: '120363409995383814@newsletter',
-    newsletterName: '♡⸝⸝> ̫ <⸝⸝♡ 𝐀ɴᴜ 𝐌ᴅ',
+    newsletterJid: '120363399723529947@newsletter',
+    newsletterName: '♡⸝⸝> ̫ <⸝⸝♡ 𝐊𝐚𝐝𝐢𝐲𝐚 𝐌ᴅ',
     serverMessageId: 999
   }
 };
