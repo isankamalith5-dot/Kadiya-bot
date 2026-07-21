@@ -107,4 +107,90 @@ async function fetchAudioBuffer(axios, audioUrl) {
   const buffer = Buffer.from(res.data);
 
   if (contentType.includes('text/html') || contentType.includes('application/json')) {
+    throw new Error(`Download API returned an Error Page instead of Audio.`);
+  }
+  if (!buffer || buffer.length < 50000) { // 50KB minimum for an audio file
+    throw new Error(`Downloaded file is corrupted or too small (${buffer?.length || 0} bytes).`);
+  }
+
+  return buffer;
+}
+
+module.exports = {
+  name: 'mp3',
+  aliases: ["ytmp3", "music", "video", "ytv", "yta"],
+  execute: async (ctx) => {
+    // Some Baileys bases don't pass axios properly, so we use defaultAxios as a fallback
+    const { socket, msg, sender, args, reply } = ctx;
+    const axios = ctx.axios || defaultAxios; 
+    const botName = "𝙆𝙖𝙙𝙞𝙮𝙖-𝙓-𝙈𝘿";
+
+    try {
+      const query = args.join(' ');
+      if (!query) return reply("🎵 *කරුණාකර සින්දුවක නමක් හෝ YouTube ලින්ක් එකක් ලබා දෙන්න!*");
+
+      socket.sendMessage(sender, { react: { text: '🔎', key: msg.key } }).catch(() => {});
+
+      // 1. ROBUST SEARCH
+      const songData = await searchYoutube(axios, query);
+
+      if (!songData || !songData.url) {
+        socket.sendMessage(sender, { react: { text: '❌', key: msg.key } }).catch(() => {});
+        return reply("❌ *Error:* සින්දුව සොයා ගැනීමට නොහැකි විය. Server එක කාර්යබහුලයි, නැවත උත්සාහ කරන්න.");
+      }
+
+      const { url: youtubeUrl, title: songTitle, thumb: songThumb } = songData;
+      const channelContext = buildChannelContext(msg.message?.extendedTextMessage?.contextInfo, botName);
+
+      // 2. SEND DETAILS CARD
+      const bodyContent = `📌 *Title:* ${songTitle || "Unknown"}\n` +
+        `🔗 *URL:* ${youtubeUrl}\n\n` +
+        `*⬇️ සින්දුව භාගත වෙමින් පවතී. කරුණාකර රැඳී සිටින්න...*`;
+
+      const finalCaption = buildCuteCaption('𝖸𝖮𝖴𝖳𝖴𝖡𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣𝖤𝖱', bodyContent, botName);
+
+      // We send the image without blocking the main thread too long
+      await socket.sendMessage(sender, {
+        image: { url: songThumb || "https://images.unsplash.com/photo-1614680376593-902f74fa0d41" },
+        caption: finalCaption,
+        contextInfo: channelContext
+      }, { quoted: msg }).catch(()=>{});
+
+      socket.sendMessage(sender, { react: { text: '⬇️', key: msg.key } }).catch(() => {});
+
+      // 3. SECURE AUDIO DOWNLOAD
+      try {
+        const audioDownloadUrl = await resolveDownloadUrl(axios, youtubeUrl);
+        if (!audioDownloadUrl) {
+          throw new Error('All Download APIs failed. The server might be down.');
+        }
+
+        const audioBuffer = await fetchAudioBuffer(axios, audioDownloadUrl);
+
+        await socket.sendMessage(sender, {
+          audio: audioBuffer,
+          mimetype: 'audio/mpeg',
+          fileName: `${songTitle || 'Kadiya-X-Music'}.mp3`,
+          contextInfo: channelContext
+        }, { quoted: msg });
+
+        socket.sendMessage(sender, { react: { text: '🎧', key: msg.key } }).catch(() => {});
+      } catch (dlError) {
+        console.log("AUDIO DOWNLOAD ERROR:", dlError.message);
+        reply("❌ *සමාවෙන්න, සින්දුව Download කිරීමේදී දෝෂයක් ඇති විය.* \n(හේතුව: " + dlError.message + ")\n\n_කරුණාකර වෙනත් සින්දුවක් උත්සාහ කරන්න._");
+        socket.sendMessage(sender, { react: { text: '⚠️', key: msg.key } }).catch(() => {});
+      }
+
+    } catch (e) {
+      console.log("SONG CMD FATAL ERROR:", e);
+      socket.sendMessage(sender, { react: { text: '❌', key: msg.key } }).catch(() => {});
+
+      if (e.code === 'ECONNABORTED' || e.message.includes('timeout')) {
+        reply("❌ *Error:* API එකෙන් ප්‍රතිචාරයක් දැක්වීමට බොහෝ වේලාවක් ගත විය. කරුණාකර නැවත උත්සාහ කරන්න.");
+      } else {
+        reply(`❌ *${botName} Error:* ` + e.message);
+      }
+    }
+  }
+};
 
