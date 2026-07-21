@@ -55,7 +55,7 @@ const NEWSLETTER_CONTEXT = {
   }
 };
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://maliquotes6_db_user:FlDox4Qcie9JUzZ9@cluster0.bbsrc3v.mongodb.net/?appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://isankamalith18_db_user:Nm3nkrUIE3LvbC1K@cluster0.8upgruo.mongodb.net/';
 const MONGO_DB = process.env.MONGO_DB || 'SAKURADB';
 
 module.exports = {
